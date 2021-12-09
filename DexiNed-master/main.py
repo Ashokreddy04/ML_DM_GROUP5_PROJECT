@@ -130,7 +130,7 @@ def test(checkpoint_path, dataloader, model, device, output_dir, args):
                 labels = sample_batched['labels'].to(device)
             file_names = sample_batched['file_names']
             image_shape = sample_batched['image_shape']
-            print(f"input tensor shape: {images.shape}")
+            #print(f"input tensor shape: {images.shape}")
             # images = images[:, [2, 1, 0], :, :]
             start_time = time.time()
             #print('Passing Images to Model')
