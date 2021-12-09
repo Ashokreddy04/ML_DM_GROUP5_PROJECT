@@ -8,6 +8,9 @@ from .googlenet import *
 from .shufflenet import *
 from .shufflenetv2 import *
 from .resnet import *
+from .resnet_100 import *
+from .resnet_channel_1_10 import *
+from .resnet_channel_1_100 import *
 from .resnext import *
 from .preact_resnet import *
 from .mobilenet import *
