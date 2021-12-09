@@ -276,8 +276,8 @@ class TestDataset(Dataset):
         if self.test_data == "CLASSIC":
             img_height = self.img_height
             img_width = self.img_width
-            print(
-                f"actual size: {img.shape}, target size: {( img_height,img_width,)}")
+            #print(
+             #   f"actual size: {img.shape}, target size: {( img_height,img_width,)}")
             # img = cv2.resize(img, (self.img_width, self.img_height))
             img = cv2.resize(img, (img_width,img_height))
             gt = None
