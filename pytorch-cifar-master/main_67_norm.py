@@ -93,9 +93,9 @@ else:
   Edge_Image_Path = os.path.join(cur_dir,args.src_dir,'train',args.src_type)
   print(Edge_Image_Path)
 
-Label_Path = os.path.join(cur_dir,'DexiNed-master/data/CIFAR10/train')
+Label_Path = os.path.join(cur_dir,args.src_dir,'train')
 
-edge_images = os.listdir(Edge_Image_Path)
+edge_images = [f for f in os.listdir(Edge_Image_Path) if f.endswith('.png')]
 labels = [f for f in os.listdir(Label_Path) if f.endswith('.pt')]
 
 image_label_list_train = []
@@ -119,9 +119,9 @@ if args.src_type == '':
 else:
   Edge_Image_Path = os.path.join(cur_dir,args.src_dir,'test',args.src_type)
 
-Label_Path = os.path.join(cur_dir,'DexiNed-master/data/CIFAR10/test')
+Label_Path = os.path.join(cur_dir,args.src_dir,'test')
 
-edge_images = os.listdir(Edge_Image_Path)
+edge_images = [f for f in os.listdir(Edge_Image_Path) if f.endswith('.png')]
 labels = [f for f in os.listdir(Label_Path) if f.endswith('.pt')]
 
 
