@@ -52,11 +52,6 @@ parser.add_argument('--src_type',
                         default='',
                         help='type of input data.')
 
-parser.add_argument('--lbl_dir',
-                        type=str,
-                        default='',
-                        help='the path to the label directory with the specfic input data.')
-
 
 
 args = parser.parse_args()
@@ -98,7 +93,7 @@ else:
   Edge_Image_Path = os.path.join(cur_dir,args.src_dir,'train',args.src_type)
   print(Edge_Image_Path)
 
-Label_Path = os.path.join(cur_dir,args.lbl_dir,'train')
+Label_Path = os.path.join(cur_dir,args.src_dir,'train')
 
 edge_images = [f for f in os.listdir(Edge_Image_Path) if f.endswith('.png')]
 labels = [f for f in os.listdir(Label_Path) if f.endswith('.pt')]
@@ -124,7 +119,7 @@ if args.src_type == '':
 else:
   Edge_Image_Path = os.path.join(cur_dir,args.src_dir,'test',args.src_type)
 
-Label_Path = os.path.join(cur_dir,args.lbl_dir,'test')
+Label_Path = os.path.join(cur_dir,args.src_dir,'test')
 
 edge_images = [f for f in os.listdir(Edge_Image_Path) if f.endswith('.png')]
 labels = [f for f in os.listdir(Label_Path) if f.endswith('.pt')]
