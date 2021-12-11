@@ -14,7 +14,7 @@ import os
 import argparse
 import numpy
 
-#from models import *
+from models import *
 from utils import progress_bar
 
 from PIL import Image
@@ -225,7 +225,7 @@ data_set_name = args.src_dir
 data_set_name = data_set_name.split('/')
 data_set_name = data_set_name[-1]
 print(f'===> Dataset Name:{data_set_name}')
-if 'CIFAR10' in data_set_name or 'SVHN' in data_set_name:
+'''if 'CIFAR10' in data_set_name or 'SVHN' in data_set_name:
   print(f'==> Importing corresponding resnet module for: {data_set_name}')
   from models import * 
 elif 'CIFAR100' in data_set_name:
@@ -233,7 +233,7 @@ elif 'CIFAR100' in data_set_name:
   from models_class_100 import * 
 else:
   print(f'==> Importing corresponding resnet module for: {data_set_name}')
-  from models_class_tiny import * 
+  from models_class_tiny import * '''
 
 # net = VGG('VGG19')
 net = ResNet18()
